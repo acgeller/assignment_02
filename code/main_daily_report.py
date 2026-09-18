@@ -51,7 +51,7 @@ if len(sys.argv) > 1 and sys.argv[1].strip() != "":
     seed = int(sys.argv[1])
 
 
-print('=== OPERATIONS: Sales by Day ===')
+print('=== OPERATIONS: Top Sales by Day ===')
 print()  # blank line
 
 raw_data = get_raw_sales_data(seed)
@@ -63,5 +63,6 @@ top_unit_by_day = find_top_entry(daily_summary, "units_sold")
 
 print_day_table(daily_summary)
 print()
-print (f"Top revenue by day: {top_revenue_days['date']} (${top_revenue_days['revenue']:,.2f})")
-print (f"Top units by day:   {top_unit_by_day['date']} ({top_unit_by_day['units_sold']} units)")
+print(f"Total Revenue:          ${calculate_total_revenue(clean_data):,.2f}")
+print(f"Busiest day by revenue: {top_revenue_days['date']} (${top_revenue_days['revenue']:,.2f})")
+print(f"Busiest day by units:   {top_unit_by_day['date']} ({top_unit_by_day['units_sold']} units)")

@@ -1,12 +1,13 @@
 Write your reflection here.
 
-See reflection.md for what makes a good reflection — be specific, use the
-terminology from this assignment (package, module, ETL, coercion, public API,
-relative import, accumulator, group by, unit vs. integration test), and make it
-actionable.
-
 This assignment helped me better understand how Python packages and modules work together, especially through the problems I had with __init__.py. I frequently encountered ModuleNotFoundError and ImportError when trying to integrate modules like transform.py into the package. Using relative imports helped me get the modules working, but I still need more practice understanding how Python resolves imports and how __init__.py provides the package's public API.
 
 I also learned more about ETL through the reports code. I understand the pipeline as getting raw data, transforming and cleaning it, and then producing the final data. Coercion is important during this process because values such as currency strings need to be converted into numbers. I also learned that unit tests check individual functions, while integration tests check whether the entire pipeline works together. The accumulator pattern, such as building a totals = {} dictionary row by row, and group by logic helped me understand how summary data is created.
 
 For more practice, I want to build a small package with multiple modules and practice using __init__.py, relative imports, and a clear public API. I also want to write more unit tests before integration tests so I can better identify whether problems come from individual functions or from how the components work together.
+
+See reflection.md for what makes a good reflection — be specific, use the
+terminology from this assignment (package, module, ETL, coercion, public API,
+relative import, accumulator, group by, unit vs. integration test), and make it
+actionable.
+
