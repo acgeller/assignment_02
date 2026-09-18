@@ -43,7 +43,7 @@ Before running:  pip install -r requirements.txt
 
 import sys
 from sales_pipeline.extract import get_raw_sales_data
-from sales_pipeline.transform import calculate_total_revenue, clean_sales_data, summarize_by_item, find_top_entry, summarize_by_day
+from sales_pipeline.transform import calculate_total_revenue, clean_sales_data, find_top_entry, summarize_by_day
 from sales_pipeline.display import print_day_table
 
 seed = None
