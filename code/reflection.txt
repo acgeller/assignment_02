@@ -5,15 +5,8 @@ terminology from this assignment (package, module, ETL, coercion, public API,
 relative import, accumulator, group by, unit vs. integration test), and make it
 actionable.
 
-I had tons of problems on this assignment that pretty much all had to do with my environment. The package __init__.py has had tons of problems executing 
-and frequently returned ModuleNotFoundError(s) or ImportError(s). The individual modules, like transform.py, went well, but had a hard time integrating
-into the packages. I had to resort to the relative imports to get everything done. Yet, even then, __init__.py was still not locating the modules. I 
-understand thet __init__.py is important and is the public API, but my environment was having serious misfits with it. 
+This assignment helped me better understand how Python packages and modules work together, especially through the problems I had with __init__.py. I frequently encountered ModuleNotFoundError and ImportError when trying to integrate modules like transform.py into the package. Using relative imports helped me get the modules working, but I still need more practice understanding how Python resolves imports and how __init__.py provides the package's public API.
 
-When I worked on the reports code, I fully understood the ETL and how the pipeline's shape, like get raw data -> clean data -> display data worked. I also 
-understand how the functions use coercion. They're basically just turning strings like currency into ints or floats. I also learned the difference 
-between the unit and integration tests once they finally ran. The unit tests just check the functions, while the integration checks the whole pipeline
-end to end. 
+I also learned more about ETL through the reports code. I understand the pipeline as getting raw data, transforming and cleaning it, and then producing the final data. Coercion is important during this process because values such as currency strings need to be converted into numbers. I also learned that unit tests check individual functions, while integration tests check whether the entire pipeline works together. The accumulator pattern, such as building a totals = {} dictionary row by row, and group by logic helped me understand how summary data is created.
 
-accumulator → the totals = {} dict you build up row by row in the summary functions.
-group by → collapsing rows to one entry per item / per day.
+For more practice, I want to build a small package with multiple modules and practice using __init__.py, relative imports, and a clear public API. I also want to write more unit tests before integration tests so I can better identify whether problems come from individual functions or from how the components work together.

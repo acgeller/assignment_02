@@ -42,7 +42,6 @@ Before running:  pip install -r requirements.txt
 
 
 import sys
-from random import seed
 from sales_pipeline.extract import get_raw_sales_data
 from sales_pipeline.transform import calculate_total_revenue, clean_sales_data, summarize_by_item, find_top_entry, summarize_by_day
 from sales_pipeline.display import print_day_table
@@ -52,7 +51,7 @@ if len(sys.argv) > 1 and sys.argv[1].strip() != "":
     seed = int(sys.argv[1])
 
 
-print('=== OPERATIONS: Revenue by Day ===')
+print('=== OPERATIONS: Sales by Day ===')
 print()  # blank line
 
 raw_data = get_raw_sales_data(seed)
