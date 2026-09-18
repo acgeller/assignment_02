@@ -4,3 +4,16 @@ See reflection.md for what makes a good reflection — be specific, use the
 terminology from this assignment (package, module, ETL, coercion, public API,
 relative import, accumulator, group by, unit vs. integration test), and make it
 actionable.
+
+I had tons of problems on this assignment that pretty much all had to do with my environment. The package __init__.py has had tons of problems executing 
+and frequently returned ModuleNotFoundError(s) or ImportError(s). The individual modules, like transform.py, went well, but had a hard time integrating
+into the packages. I had to resort to the relative imports to get everything done. Yet, even then, __init__.py was still not locating the modules. I 
+understand thet __init__.py is important and is the public API, but my environment was having serious misfits with it. 
+
+When I worked on the reports code, I fully understood the ETL and how the pipeline's shape, like get raw data -> clean data -> display data worked. I also 
+understand how the functions use coercion. They're basically just turning strings like currency into ints or floats. I also learned the difference 
+between the unit and integration tests once they finally ran. The unit tests just check the functions, while the integration checks the whole pipeline
+end to end. 
+
+accumulator → the totals = {} dict you build up row by row in the summary functions.
+group by → collapsing rows to one entry per item / per day.
